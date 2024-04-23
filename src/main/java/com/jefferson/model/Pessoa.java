@@ -1,8 +1,6 @@
 package com.jefferson.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -14,18 +12,23 @@ import java.time.LocalDate;
 @Setter
 public class Pessoa {
 
-    @jakarta.persistence.Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
+    @Column(name = "nome")
     private String nome;
 
+    @Column(name = "data_nascimento)")
     private LocalDate dataNascimento;
 
+    @Column(name = "cpf")
     private String cpf;
 
+    @Column(name = "funcionario")
     private Boolean funcionario;
 
+    @Column(name = "gerente")
     private Boolean gerente;
 
 
