@@ -111,7 +111,7 @@ public class ProjetoController {
 
         // Se não houver erros, salvar o projeto e redirecionar para outra página
         service.salvarProjeto(projeto);
-        return "redirect:projetos/";
+        return "redirect:/projetos/";
     }
 
     @DeleteMapping("/{id}")
