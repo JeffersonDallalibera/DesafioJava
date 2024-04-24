@@ -1,7 +1,7 @@
 # Projeto de Gerenciamento de Projetos
 
 ## Descrição
-Este é um projeto de gerenciamento de projetos que permite realizar operações CRUD (Create, Read, Update, Delete) para projetos.
+Projeto Destinado a gerenciamento de projetos, visando a criação, edição e exclusão de projetos.
 
 ## Funcionalidades
 - Cadastro de novos projetos
@@ -20,9 +20,9 @@ Este é um projeto de gerenciamento de projetos que permite realizar operações
 
 ## Instalação e Configuração
 1. Clone o repositório: `git clone https://github.com/JeffersonDallalibera/DesafioJava`
-2. Importe o projeto na sua IDE favorita
-3. Configure o banco de dados de acordo com as configurações do projeto
-4. Execute a aplicação
+2. Importe o projeto.
+3. Configure o banco de dados de acordo com as configurações do projeto.
+4. Execute a aplicação.
 
 ## Como Usar
 1. Abra o navegador e vá para `http://localhost:8080/projetos/`
