@@ -45,16 +45,28 @@ public class ProjetoService {
     }
 
     public Projeto salvarProjeto(Projeto projeto) {
-        /*Validacao dos dados para salvar*/
-        String nomeProjeto = projeto.getNome();
-        if (nomeProjeto.isEmpty()) {
-            return  null;
-        }
 
         return repository.save(projeto);
+    }
+    public List<Projeto> pesquisarProjetosPorTermo(String termoPesquisa) {
+        return repository.findByNomeContainingIgnoreCase(termoPesquisa);
     }
 
     public void deletarProjeto(Long id) {
         repository.deleteById(id);
+    }
+
+    public Projeto atualizarProjeto(Long id, Projeto projetoAtualizado) throws RecordNotFoundException {
+        Projeto projetoExistente = repository.findById(id)
+                .orElseThrow(() -> new RecordNotFoundException("Projeto nao Encontrado com o ID "+ id));
+
+        projetoExistente.setNome(projetoAtualizado.getNome());
+        projetoExistente.setDescricao(projetoAtualizado.getDescricao());
+        projetoExistente.setDataInicio(projetoAtualizado.getDataInicio());
+        projetoExistente.setDataFim(projetoAtualizado.getDataFim());
+        projetoExistente.setOrcamento(projetoAtualizado.getOrcamento());
+        projetoExistente.setRisco(projetoAtualizado.getRisco());
+        projetoExistente.setStatus(projetoAtualizado.getStatus());
+        return repository.save(projetoExistente);
     }
 }

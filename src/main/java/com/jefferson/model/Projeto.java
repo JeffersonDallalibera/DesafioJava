@@ -44,4 +44,10 @@ public class Projeto {
     private Integer gerenteResponsavel;
 
 
+    public Projeto(Long id) {
+    }
+
+    public void addMembro(Pessoa pessoa) {
+
+    }
 }

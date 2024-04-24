@@ -19,28 +19,27 @@
 	</style>
 </head>
 <body>
-<div class="container">
-	<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="container-fluid">
-				<a class="navbar-brand">Projetos</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+			<div class="container">
+				<a class="navbar-brand" href="#">Projetos</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="/projetos/">Home</a>
-						</li>
 
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="/projetos/">Home</a>
+						</li>
 					</ul>
-					<form class="d-flex">
-						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-						<button class="btn btn-outline-success" type="submit">Search</button>
+					<form class="form-inline my-2 my-lg-0" action="/projetos/search" method="GET">
+						<input class="form-control mr-sm-2" type="search" placeholder="Pesquisar projeto" aria-label="Search" name="q">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 					</form>
 				</div>
 			</div>
 		</nav>
+<div class="container">
 	<h2>Novo Projeto</h2>
 	<form action="novo-projeto" method="post" onsubmit="return validarForm()">
 		<div class="form-group">
@@ -60,10 +59,6 @@
 		<div class="form-group">
 			<label for="dataPrevisaoFim">Previsão de Término:</label>
 			<input type="date" class="form-control" id="dataPrevisaoFim" name="dataPrevisaoFim" value="${projeto.dataPrevisaoFim}">
-		</div>
-		<div class="form-group">
-			<label for="dataFim">Data Real de Término:</label>
-			<input type="date" class="form-control" id="dataFim" name="dataFim" value="${projeto.dataFim}">
 		</div>
 		<div class="form-group">
 			<label for="orcamento">Orçamento Total:</label>

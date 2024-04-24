@@ -31,5 +31,10 @@ public class Pessoa {
     @Column(name = "gerente")
     private Boolean gerente;
 
+    public Pessoa(Long idPessoa) {
+    }
 
+    public boolean isFuncionario() {
+        return funcionario != null && funcionario;
+    }
 }
